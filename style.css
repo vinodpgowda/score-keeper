@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: sans-serif;
+}
+
+#score-card {
+    font-size: 35px;
+}
+
+#footer button{
+    color: white;
+    cursor: pointer;
+}
+
+#p1 {
+    background-color: green;
+}
+
+#p2 {
+    background-color: blue;
+}
+
+#reset {
+    background-color: red;
+}
+
+
+#p1:disabled,
+#p2:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 1;
+}
