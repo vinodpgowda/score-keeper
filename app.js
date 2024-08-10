@@ -7,6 +7,7 @@ const p2PointsEl = document.querySelector("#p2Points");
 
 function updatePoints(playerPointsEl, otherPlayerPointsEl, playerButtonEl, otherPlayerButtonEl){
     
+    // variables - test 
     const pointsEl = document.querySelector("#points");
     const points = pointsEl.value;
     
