@@ -5,12 +5,11 @@ const resetButton = document.querySelector("#reset");
 const p1PointsEl = document.querySelector("#p1Points");
 const p2PointsEl = document.querySelector("#p2Points");
 
+const pointsEl = document.querySelector("#points");
+
 function updatePoints(playerPointsEl, otherPlayerPointsEl, playerButtonEl, otherPlayerButtonEl){
     
-    // variables - test 
-    const pointsEl = document.querySelector("#points");
-    const points = pointsEl.value;
-    
+    let points = pointsEl.value; // Get the target score from the dropdown
     let playerPoints = parseInt(playerPointsEl.innerText);
     playerPoints += 1
 
@@ -24,14 +23,20 @@ function updatePoints(playerPointsEl, otherPlayerPointsEl, playerButtonEl, other
     playerPointsEl.innerText = playerPoints;
 }
 
-p1Button.addEventListener("click", () => {updatePoints(p1PointsEl,p2PointsEl,p1Button,p2Button)});
-p2Button.addEventListener("click", () => {updatePoints(p2PointsEl,p1PointsEl,p2Button,p1Button)});
+function resetGame(){
 
-resetButton.addEventListener("click", ()=> {
     p1PointsEl.innerText = "0";
     p2PointsEl.innerText = "0";
     p1PointsEl.style.color = "black";
     p2PointsEl.style.color = "black";
     p1Button.disabled = false;
     p2Button.disabled = false;
-});
+}
+
+p1Button.addEventListener("click", () => {updatePoints(p1PointsEl,p2PointsEl,p1Button,p2Button)});
+p2Button.addEventListener("click", () => {updatePoints(p2PointsEl,p1PointsEl,p2Button,p1Button)});
+
+resetButton.addEventListener("click", () => {resetGame()});
+
+// Reset the game whenever the points value is changed
+pointsEl.addEventListener("change", () => {resetGame()});
