@@ -9,27 +9,27 @@
 </head>
 
 <body>
-
-    <div id="header">
-        Ping Pong Score Keeper
-    </div>
-
-    <div id="body">
-
-        <div id="playing-to">
-            Playing To:
-            <select name="points" id="points">
-                <option value="5">5</option>
-                <option value="7">7</option>
-                <option value="11">11</option>
-                <option value="21">21</option>
-                <option value="25">25</option>
-                <option value="49">49</option>
-            </select>
+    <div id="container">
+        <div id="header">
+            Ping Pong Score Keeper
         </div>
 
-        <div id="score-card">
-            <span id="p1Points">0</span> to <span id="p2Points">0</span>
+        <div id="body">
+            <div id="playing-to">
+                Playing To:
+                <select name="points" id="points">
+                    <option value="5">5</option>
+                    <option value="7">7</option>
+                    <option value="11">11</option>
+                    <option value="21">21</option>
+                    <option value="25">25</option>
+                    <option value="49">49</option>
+                </select>
+            </div>
+
+            <div id="score-card">
+                <span id="p1Points">0</span> to <span id="p2Points">0</span>
+            </div>
         </div>
 
         <div id="footer">
@@ -38,6 +38,7 @@
             <button id="reset">Reset</button>
         </div>
     </div>
+
     <script src="app.js"></script>
 </body>
 
